@@ -4,7 +4,11 @@ import {
   HomeLayout,
   Register,
   Login,
-  DashboardLayout
+  DashboardLayout,
+  AddJob,
+  Admin,
+  AllJobs,
+  Deletejob,
 } from './pages'
 // import { HomeLayout } from './pages'
 const router = createBrowserRouter([
@@ -24,6 +28,23 @@ const router = createBrowserRouter([
     path: '/dashboard',
     element: <DashboardLayout />
   },
+  {
+    path: '/addjob',
+    element: <AddJob />
+  },
+  {
+    path: '/admin',
+    element: <Admin />
+  },
+  {
+    path: '/alljobs',
+    element: <AllJobs />
+  },
+  {
+    path: '/deletejob',
+    element: <Deletejob />
+  },
+
 
 ])
 
