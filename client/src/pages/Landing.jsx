@@ -3,8 +3,7 @@ import styled from 'styled-components'
 
 const StyledBtn = styled.button`
     font-size:1.5rem;
-    background: red;
-    color: white;
+    background: ${props => props.bg === "red"? "red": "blue"};
 `
 
 const Landing = () => {
@@ -13,7 +12,7 @@ const Landing = () => {
       <h1>
       Landing
         </h1>
-        <StyledBtn>button</StyledBtn>
+        <StyledBtn bg="red">button</StyledBtn>
     </div>
   )
 }
