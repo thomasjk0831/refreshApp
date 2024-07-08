@@ -7,6 +7,9 @@ import {
   DashboardLayout,
   Landing,
   Error,
+  Addjob,
+  Admin,
+  Deletejob
 } from './pages'
 
 const router = createBrowserRouter([
@@ -30,7 +33,20 @@ const router = createBrowserRouter([
       {
         path: 'dashboard',
         element: <DashboardLayout />
-      }
+      },
+      {
+        path: 'addjob',
+        element: <Addjob />
+      },
+      {
+        path: 'admin',
+        element: <Admin />
+      },
+      {
+        path: 'deletejob',
+        element: <Deletejob />
+      },
+
     ]
   }
 ])
