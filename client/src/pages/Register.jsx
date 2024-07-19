@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Wrapper from '../assets/wrappers/RegisterAndLoginPage'
-import Logo  from '../components/Logo'
+import { Logo, FormRow } from '../components'
 
 const Register = () => {
   return (
@@ -9,19 +9,11 @@ const Register = () => {
       <form className='form'>
         <Logo />
         <h4>Register</h4>
-        <div className="form-row">
-          <label htmlFor='name' className='form-label'>
-            name
-            </label>
-            <input 
-              type='text' 
-              id='name' 
-              name='name' 
-              className='form-input' 
-              defaultValue="default"
-              required
-            />
-        </div>
+        <FormRow type='text' name='name' labelText='First Name' defaultValue='Thomas'/>
+        <FormRow type='text' name='lastName' labelText='Last Name' defaultValue='Kim'/>
+        <FormRow type='text' name='location' defaultValue='US'/>
+        <FormRow type='email' name='email' defaultValue='thomas@gmail.com'/>
+        <FormRow type='password' name='password' defaultValue='password123'/>
         <button type='submit' className='btn btn-block'>submit</button>
         <p>
           Already a member?
