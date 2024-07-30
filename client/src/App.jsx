@@ -9,7 +9,10 @@ import {
   Error,
   Addjob,
   Admin,
-  Deletejob
+  Deletejob,
+  Stats,
+  AllJobs,
+  Profile,
 } from './pages'
 
 const router = createBrowserRouter([
@@ -19,6 +22,7 @@ const router = createBrowserRouter([
     errorElement: <Error/>,
     children:[
       {
+        //default route
         index: true,
         element: <Landing />
       },
@@ -32,7 +36,29 @@ const router = createBrowserRouter([
       },
       {
         path: 'dashboard',
-        element: <DashboardLayout />
+        element: <DashboardLayout />,
+        children: [
+          {
+            index:true,
+            element: <Addjob />
+          },
+          {
+            path: 'stats',
+            element: <Stats />
+          },
+          {
+            path: 'all-jobs',
+            element: <AllJobs />
+          },  
+          {        
+            path: 'profile',
+            element: <Profile />
+          },
+          {        
+            path: 'admin',
+            element: <Admin />
+          }
+        ]
       },
       {
         path: 'addjob',

@@ -15,7 +15,7 @@ const Landing = () => {
       <div className='container page'>
           <div className='info'>
               <h1>
-                job 
+                job
                 <span>tracking</span>
                 app
               </h1>
