@@ -3,6 +3,7 @@ import React from 'react'
 import { FaAlignLeft } from 'react-icons/fa'
 import Logo from './Logo'
 import { useDashboardContext } from '../pages/DashboardLayout'
+import LogoutContainer from './LogoutContainer'
 
 const Navbar = () => {
   const {toggleSidebar} = useDashboardContext()
@@ -18,7 +19,9 @@ const Navbar = () => {
             dashboard
           </h4>
         </div>
-        <div className="btn-containter">toggle/logout</div>
+        <div className="btn-containter">
+          <LogoutContainer />
+        </div>
       </div>
     </Wrapper>
   )
